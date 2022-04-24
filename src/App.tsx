@@ -1,8 +1,7 @@
 import { useState, useCallback, FormEvent, ChangeEvent } from 'react'
-import { useQuery, useMutation } from '@apollo/client'
-import { GET_ALL_USERS, CREATE_USER } from './services/users'
+import { useQuery, useMutation, useSubscription } from '@apollo/client'
+import { GET_ALL_USERS, CREATE_USER, SUBSCRIPTION_ALL_USERS } from './services/users'
 import UsersTypes from './types/users'
-
 
 function App() {
   const [user, setUser] = useState<UsersTypes.User>({ name: '', email: ''})

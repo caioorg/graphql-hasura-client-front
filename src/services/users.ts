@@ -28,3 +28,12 @@ export const CREATE_USER = gql`
     }
   }
 `;
+
+export const SUBSCRIPTION_ALL_USERS = gql`
+  subscription SubscriptionListAllUsers {
+    users {
+      name
+      email
+    }
+  }
+`
